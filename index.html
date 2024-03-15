@@ -25,6 +25,32 @@
       background-color: #f2f2f2;
       padding: 25px;
     }
+    /* Override Bootstrap's default primary panel color */
+    .panel-primary {
+      border-color: #000; /* black border */
+    }
+
+    .panel-primary > .panel-heading {
+      background-color: #000; /* black background */
+      border-color: #000;
+      color: #fff; /* white text color for contrast */
+    }
+    /* Styles for tag buttons */
+    .btn.tag-btn {
+      margin: 2px;
+      border: none; /* Remove border */
+      background-color: #ddd; /* A light grey background */
+      color: #555; /* Dark grey text */
+      cursor: pointer; /* Changes the cursor to a pointer */
+      padding: 5px 10px; /* Padding inside the button */
+      border-radius: 3px; /* Rounded corners */
+      transition: background-color 0.3s; /* Smooth transition for hover effect */
+    }
+
+    .btn.tag-btn:hover {
+      background-color: #ccc; /* Slightly darker grey background on hover */
+    }
+
   </style>
 </head>
 
@@ -50,14 +76,11 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
           <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Deals</a></li>
-          <li><a href="#">Stores</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">Locations</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> About Me</a></li>
         </ul>
       </div>
     </div>
@@ -65,12 +88,20 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-sm-4" href="#">
         <div class="panel panel-primary">
-          <div class="panel-heading">BLACK FRIDAY DEAL</div>
-          <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive"
+          <div class="panel-heading">LOCATION TITLE</div>
+          <div class="panel-footer">
+          <button class="btn tag-btn city-tag">City</button>
+          </div>
+          <div class="panel-body"><img src="https://hollywoodlocations.com/wp-content/uploads/2020/06/429-Santa-Monica-Blvd-Santa-Monica-CA-401-Santa-Monica-blvd-1-LargeHighDefinition-e1693864134900.jpg" class="img-responsive"
               style="width:100%" alt="Image"></div>
-          <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+          <div class="panel-footer">
+          <!-- Category tags example -->
+          <button class="btn tag-btn category-tag">Tag1</button>
+          <button class="btn tag-btn category-tag">Tag2</button>
+          <!-- Add more category tags as needed -->
+        </div>
         </div>
       </div>
       <div class="col-sm-4">
@@ -79,6 +110,7 @@
           <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive"
               style="width:100%" alt="Image"></div>
           <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+
         </div>
       </div>
       <div class="col-sm-4">
